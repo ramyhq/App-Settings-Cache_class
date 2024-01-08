@@ -7,10 +7,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 ///
 //This class to Cash App Settings (Theme,Language,...)
 ///
-class AppSettingsCash {
+class AppSettingsCache {
   static SharedPreferences? _sharedPreferences;
 
-  AppSettingsCash() {
+  AppSettingsCache() {
     // init();
     SharedPreferences.getInstance().then((value) {
       _sharedPreferences = value;
@@ -19,11 +19,11 @@ class AppSettingsCash {
 
   Future<void> init() async {
     _sharedPreferences ??= await SharedPreferences.getInstance();
-    print('SharedPreference Initialized from >> AppSettingsCash');
+    print('SharedPreference Initialized from >> AppSettingsCach');
   }
 
   ///will clear all the data stored in preference
-  void clearAppSettingCashedData() async {
+  void clearAppSettingCachedData() async {
     _sharedPreferences!.clear();
   }
 
